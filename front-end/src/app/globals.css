@@ -17,8 +17,9 @@
 }
 
 body {
-  
-}
+  min-height: 100vh;
+  height: 100%;
+} 
 
 @layer utilities {
   .text-balance {
