@@ -11,6 +11,8 @@ export default function AddDiary() {
 
     const [diaryFormData, setDiaryFormData] = useState(initialFormData);
 
+    console.log(diaryFormData);
+
     return (
         <>
             <div className="flex min-h-screen flex-col p-8">
