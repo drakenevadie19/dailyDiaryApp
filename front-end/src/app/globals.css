@@ -19,7 +19,16 @@
 body {
   min-height: 100vh;
   height: 100%;
+
+  background-image: url(../../public/backgroundImage.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
+
+label, h1 {
+  color: white
+}
 
 @layer utilities {
   .text-balance {
