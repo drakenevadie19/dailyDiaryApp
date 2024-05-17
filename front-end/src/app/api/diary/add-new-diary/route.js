@@ -14,11 +14,13 @@ export async function POST(req) {
         const newlyCreatedDiaryData = await Diary.create(extractData);
         // If the model is created successfully, the return success == true, else return false;
         if (newlyCreatedDiaryData) {
+            console.log("Adding diary successfully");
             return NextResponse.json({
                 success: true, 
                 message: 'Diary added successfully'
             })
         } else {
+            console.log("Failed adding diary");
             return NextResponse.json({
                 success: false,
                 message: "Failed to add new diary to database! Please try again"
@@ -26,6 +28,7 @@ export async function POST(req) {
         }
     } catch (e) {
         console.log(e);
+        console.log("Failed adding diary");
         return NextResponse.json({
             success: false,
             message: 'Something went wrong'
