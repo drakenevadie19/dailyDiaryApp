@@ -38,8 +38,14 @@ export default function DiaryListComponent({allDiaries}) {
                                 onClick={() => handleDeleting(diary._id)}
                                 >
                                 Delete this Diary
+                            </button>
+                            <button
+                                className="border border-red-500 p-4 bg-black text-white"
+                                onClick={() => router.push(`/diary-list/${diary._id}`)}
+                                >
+                                View diary detail
                             </button>                        
-                            </div>
+                        </div>
                     ))
                     : <h1>No diary from Database</h1>
                 }
